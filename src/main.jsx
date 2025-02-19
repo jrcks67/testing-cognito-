@@ -5,6 +5,8 @@ import App from './App.jsx'
 import './index.css'
 import { Amplify } from 'aws-amplify'
 import config from './aws-exports'
+import awsExports from "./aws-exports";
+
 
 Amplify.configure(config)
 
