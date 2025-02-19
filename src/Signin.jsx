@@ -160,6 +160,12 @@ const Signin = () => {
         e.preventDefault();
 
         try {
+            const authState = await checkAuthState()
+            if(authState) {
+                navigate("/dashboard")
+                return
+            }
+            
             const signedIn = await handleSignin({
                 username: form.email,
                 password: form.password
@@ -171,12 +177,17 @@ const Signin = () => {
             }
 
             if (signedIn.data.isSignedIn) {
-                
-                const authState = await checkAuthState()
-                if(authState){
-                    navigate("/dashboard");
-                }
-                
+                const session = await fetchAuthSession();
+                const userData = await handleGetCurrentUser();
+
+                setUserState({
+                    user: userData.data.user,
+                    idToken: session.tokens.idToken,
+                    accessToken: session.tokens.accessToken,
+                    refreshToken: session.tokens.refreshToken
+                });
+
+                navigate("/dashboard");
             }
         } catch (error) {
             if (error.message === "User is already signed in") {
