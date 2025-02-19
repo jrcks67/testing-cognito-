@@ -103,6 +103,28 @@ const handleGetCurrentUser = async () => {
     }
 
 }
+const checkAuthState = async (setUserState) => {
+    try {
+        const currentUser = await getCurrentUser();
+        if (currentUser) {
+            const session = await fetchAuthSession();
+            const userData = await handleGetCurrentUser();
+
+            setUserState({
+                user: userData.data.user,
+                idToken: session.tokens.idToken,
+                accessToken: session.tokens.accessToken,
+                refreshToken: session.tokens.refreshToken
+            });
+
+            return true; // User is authenticated
+        }
+        return false; // No authenticated user
+    } catch (error) {
+        console.log("No authenticated user");
+        return false;
+    }
+};
 
 export { 
     handleSignup,
@@ -112,5 +134,6 @@ export {
     handleResetPassword,
     handleConfirmResetPassword,
     handleSignout,
-    handleGetCurrentUser
+    handleGetCurrentUser,
+    checkAuthState
 }

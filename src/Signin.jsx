@@ -111,11 +111,11 @@
 
 // Notes:
 // if the user has already signedin please make sure you check and directly redirect them to protected routes home
-
+// if user has signed in and you try to redirect to protected routes it wont unless you make sure the logic in protected routes check for session locally. session in state variabes arent persistent
 
 import { useState, useEffect } from "react";
 import { useAuth } from "./context/AuthContext";
-import { handleGetCurrentUser, handleSignin } from "./lib/Auth";
+import { checkAuthState, handleGetCurrentUser, handleSignin } from "./lib/Auth";
 import { useNavigate } from "react-router-dom";
 import { fetchAuthSession, getCurrentUser } from "aws-amplify/auth";
 
@@ -161,7 +161,7 @@ const Signin = () => {
 
         try {
             const signedIn = await handleSignin({
-                email: form.email,
+                username: form.email,
                 password: form.password
             });
             
@@ -171,17 +171,12 @@ const Signin = () => {
             }
 
             if (signedIn.data.isSignedIn) {
-                const session = await fetchAuthSession();
-                const userData = await handleGetCurrentUser();
-
-                setUserState({
-                    user: userData.data.user,
-                    idToken: session.tokens.idToken,
-                    accessToken: session.tokens.accessToken,
-                    refreshToken: session.tokens.refreshToken
-                });
-
-                navigate("/dashboard");
+                
+                const authState = await checkAuthState()
+                if(authState){
+                    navigate("/dashboard");
+                }
+                
             }
         } catch (error) {
             if (error.message === "User is already signed in") {
@@ -221,3 +216,4 @@ const Signin = () => {
 };
 
 export default Signin;
+
