@@ -57,12 +57,14 @@ const handleSignin = async ({username,password}) => {
 
 }
 
+
+
 const handleResetPassword = async ({email}) => {
     try {
         const { nextStep } = await resetPassword({
             username:email
         })
-        return { success: true, data: { nectStep }}
+        return { success: true, data: { nextStep }}
     } catch ( error ) {
         return { success: false, error: error.message}
     }
