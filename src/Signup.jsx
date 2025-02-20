@@ -22,7 +22,8 @@ const Signup = () => {
     try {
       const result = await handleSignup({
         email: form.email,
-        password: form.password
+        password: form.password,
+        userType: "employer"
       });
 
       if (result.success) {

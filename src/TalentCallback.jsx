@@ -109,7 +109,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const REDIRECT_URI = 'https://d1yrl9dxaro8f7.cloudfront.net/talent/dashboard';
-const LAMBDA_ENDPOINT = 'https://vpvho25ne6.execute-api.ap-south-1.amazonaws.com/authentication';
+const LAMBDA_ENDPOINT = 'https://vpvho25ne6.execute-api.ap-south-1.amazonaws.com/authentication/auth';
 
 const TalentCallback = () => {
   const [user, setUser] = useState(null);

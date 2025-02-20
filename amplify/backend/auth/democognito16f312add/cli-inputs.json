@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "democognito1f15b43b8_identitypool_f15b43b8",
+    "identityPoolName": "democognito16f312add_identitypool_6f312add",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "democof15b43b8",
-    "userPoolName": "democognito1f15b43b8_userpool_f15b43b8",
+    "resourceNameTruncated": "democo6f312add",
+    "userPoolName": "democognito16f312add_userpool_6f312add",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -29,10 +29,10 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "democof15b43b8_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "democo6f312add_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "f15b43b8",
-    "resourceName": "democognito1f15b43b8",
+    "sharedId": "6f312add",
+    "resourceName": "democognito16f312add",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "defaultSocial",
     "hostedUI": true,
@@ -40,10 +40,10 @@
       "email, phone_number"
     ],
     "triggers": {},
-    "hostedUIDomainName": "democog1f15b43b8-f15b43b8",
+    "hostedUIDomainName": "democog16f312add-6f312add",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:5173/talent-dashboard/\",\"http://localhost:5173/employer-dashboard/\"],\"LogoutURLs\":[\"http://localhost:5173/admin-dashboard/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://d1yrl9dxaro8f7.cloudfront.net/talent/dashboard/\",\"https://d1yrl9dxaro8f7.cloudfront.net/dashboard/\",\"https://d1yrl9dxaro8f7.cloudfront.net/employer/dashboard/\"],\"LogoutURLs\":[\"https://d1yrl9dxaro8f7.cloudfront.net/signin/\",\"https://d1yrl9dxaro8f7.cloudfront.net/talent-signin/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,

@@ -2,7 +2,7 @@
   "analytics": {},
   "api": {},
   "auth": {
-    "democognito1f15b43b8": {
+    "democognito16f312add": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
