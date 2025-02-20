@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "democognito27135cee_identitypool_27135cee",
+    "identityPoolName": "democognito1f15b43b8_identitypool_f15b43b8",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "democo27135cee",
-    "userPoolName": "democognito27135cee_userpool_27135cee",
+    "resourceNameTruncated": "democof15b43b8",
+    "userPoolName": "democognito1f15b43b8_userpool_f15b43b8",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -19,9 +19,7 @@
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
-    "requiredAttributes": [
-      "email"
-    ],
+    "requiredAttributes": [],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
@@ -31,16 +29,21 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "democo27135cee_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "democof15b43b8_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "27135cee",
-    "resourceName": "democognito27135cee",
+    "sharedId": "f15b43b8",
+    "resourceName": "democognito1f15b43b8",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "default",
+    "useDefault": "defaultSocial",
+    "hostedUI": true,
     "usernameAttributes": [
-      "email"
+      "email, phone_number"
     ],
     "triggers": {},
+    "hostedUIDomainName": "democog1f15b43b8-f15b43b8",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:5173/talent-dashboard/\",\"http://localhost:5173/employer-dashboard/\"],\"LogoutURLs\":[\"http://localhost:5173/admin-dashboard/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,

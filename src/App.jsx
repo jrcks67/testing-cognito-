@@ -29,6 +29,7 @@ import Signin from "./Signin";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Signup from "./Signup";
 import TalentAuth from "./TalentSignin";
+import TalentCallback from "./TalentCallback";
 
 const App = () => {
     return (
@@ -37,6 +38,7 @@ const App = () => {
                 <Routes>
                     <Route path="/signin" element={<Signin />} />
                     <Route path="/talent-signin" element={<TalentAuth />} />
+                    <Route path="/talent-callback" element={<TalentCallback />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route element={<ProtectedRoutes />}>
                         <Route path="/dashboard" element={<Dashboard />} />

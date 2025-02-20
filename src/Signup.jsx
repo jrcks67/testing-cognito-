@@ -49,7 +49,7 @@ const Signup = () => {
       });
 
       if (result.success) {
-        navigate("/sigin");
+        navigate("/signin");
       } else {
         setError(result.error);
       }

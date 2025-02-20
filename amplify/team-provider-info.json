@@ -1,19 +1,33 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-democognito-dev-25993-authRole",
-      "UnauthRoleArn": "arn:aws:iam::680615681782:role/amplify-democognito-dev-25993-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::680615681782:role/amplify-democognito-dev-25993-authRole",
+      "AuthRoleName": "amplify-democognito1-dev-fa559-authRole",
+      "UnauthRoleArn": "arn:aws:iam::680615681782:role/amplify-democognito1-dev-fa559-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::680615681782:role/amplify-democognito1-dev-fa559-authRole",
       "Region": "ap-south-1",
-      "DeploymentBucketName": "amplify-democognito-dev-25993-deployment",
-      "UnauthRoleName": "amplify-democognito-dev-25993-unauthRole",
-      "StackName": "amplify-democognito-dev-25993",
-      "StackId": "arn:aws:cloudformation:ap-south-1:680615681782:stack/amplify-democognito-dev-25993/a82de330-ecb5-11ef-8d99-062658261f11",
-      "AmplifyAppId": "d1ngl5axmrvj2h"
+      "DeploymentBucketName": "amplify-democognito1-dev-fa559-deployment",
+      "UnauthRoleName": "amplify-democognito1-dev-fa559-unauthRole",
+      "StackName": "amplify-democognito1-dev-fa559",
+      "StackId": "arn:aws:cloudformation:ap-south-1:680615681782:stack/amplify-democognito1-dev-fa559/a88ec950-eea1-11ef-86b6-06e377599f5f",
+      "AmplifyAppId": "d257jn80o43wu6"
     },
     "categories": {
+      "analytics": {
+        "Pinpoint": {
+          "Name": "democognito1-dev",
+          "Id": "bec115f32e944b57847be0bec01656cc",
+          "Region": "ap-south-1"
+        }
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "democognito1-dev",
+          "Id": "bec115f32e944b57847be0bec01656cc",
+          "Region": "ap-south-1"
+        }
+      },
       "auth": {
-        "democognito27135cee": {}
+        "democognito1f15b43b8": {}
       }
     }
   }

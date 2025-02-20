@@ -141,6 +141,7 @@ const Signin = () => {
     });
     const [showResetConfirm, setShowResetConfirm] = useState(false);
     const [passwordReset, setPasswordReset] = useState(false)
+    const [successMessage, setSuccessMessage] = useState("")
 
     useEffect(() => {
         checkCurrentUser();

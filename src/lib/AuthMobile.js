@@ -33,11 +33,12 @@ import { signIn, signUp, confirmSignUp, confirmSignIn, fetchAuthSession, getCurr
 const handleMobileSignin = async ({ phoneNumber }) => {
     try {
         const formattedPhoneNumber = phoneNumber.startsWith('+91') ? phoneNumber : `+91${phoneNumber}`;
+        const defaultPassword = 'Password@123';  // Simple valid password
 
         try {
             const { nextStep } = await signIn({
                 username: formattedPhoneNumber,
-                password: formattedPhoneNumber, // Using phone number as password for custom auth
+                password: defaultPassword,
                 options: {
                     authFlowType: "CUSTOM_WITH_SMS"
                 }
@@ -49,11 +50,10 @@ const handleMobileSignin = async ({ phoneNumber }) => {
             if (error.message.includes('User does not exist')) {
                 const { isSignUpComplete, nextStep } = await signUp({
                     username: formattedPhoneNumber,
-                    password: formattedPhoneNumber, // Using phone number as password for signup
+                    password: defaultPassword,
                     options: {
                         userAttributes: {
-                            phone_number: formattedPhoneNumber,
-                            'custom:userType': 'talent'
+                            phone_number: formattedPhoneNumber
                         },
                         autoSignIn: true
                     }
@@ -134,12 +134,13 @@ const handleOtpVerification = async ({ phoneNumber, otp, isNewUser }) => {
  * @param {string} params.phoneNumber
  * @returns {Promise<{success: boolean, error?: string}>}
  */
+
 const handleResendOtp = async ({ phoneNumber }) => {
     const formattedPhoneNumber = phoneNumber.includes('+91') ? phoneNumber : `+91${phoneNumber}`;
     try {
-        // Fixed: userName -> username
         await signIn({
-            username: formattedPhoneNumber,  // Fixed: userName -> username
+            username: formattedPhoneNumber,
+            password: 'Password@123',  // Same default password
             options: {
                 authFlowType: 'CUSTOM_WITH_SMS'
             }
