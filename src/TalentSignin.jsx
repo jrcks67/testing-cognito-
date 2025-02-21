@@ -167,8 +167,9 @@
 import React from 'react';
 
 const CLIENT_ID = '867vpybjp53bk6';
-const REDIRECT_URI = 'https://d1yrl9dxaro8f7.cloudfront.net';
-const SCOPE = 'openid profile email';
+const REDIRECT_URI = 'https://vpvho25ne6.execute-api.ap-south-1.amazonaws.com/authentication/auth';
+const SCOPE = 'r_liteprofile r_emailaddress';
+
 
 const TalentAuth = () => {
   const handleLogin = () => {
