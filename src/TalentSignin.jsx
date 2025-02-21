@@ -167,7 +167,7 @@
 import React from 'react';
 
 const CLIENT_ID = '867vpybjp53bk6';
-const REDIRECT_URI = 'https://d1yrl9dxaro8f7.cloudfront.net/talent-callback';
+const REDIRECT_URI = 'https://d1yrl9dxaro8f7.cloudfront.net';
 const SCOPE = 'openid profile email';
 
 const TalentAuth = () => {
